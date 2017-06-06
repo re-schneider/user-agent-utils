@@ -1,6 +1,8 @@
 user-agent-utils
 ================
 
+[![Build Status](https://travis-ci.org/AmadeusITGroup/user-agent-utils.svg?branch=master)](https://travis-ci.org/AmadeusITGroup/user-agent-utils/branches)
+
 Utilities for processing user-agent strings. Can be used to handle http requests in real-time or to analyze log files.
 
 http://www.bitwalker.eu/software/user-agent-utils
