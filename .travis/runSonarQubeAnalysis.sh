@@ -12,8 +12,8 @@ set -e
 
 
 # We don't want to run X times the same analysis because of the matrix configuration
-if [ "${SQ_RUN}" != "yes" ]; then
-	echo "Duplicated run detected, skipping the SonarQube analysis..."
+if [ "${TRAVIS_JDK_VERSION}" != "1.8" ]; then
+	echo "Duplicated run detected, skipping the SonarQube analysis... (running on ${TRAVIS_JDK_VERSION})"
 	exit 0
 fi
 
