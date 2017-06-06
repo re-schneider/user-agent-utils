@@ -16,6 +16,9 @@ env:
     #
     # SONAR_TOKEN
     - secure: "gjbQsQttulgrRYiMzLLKId1Mj8pZU5rejcyqLW3Cw87trZwjVwHBWH49yBkZcWJFV60bxvKenpUiz2VAHMEGD6hyvp10r02C6EZhz83YqcSY0OkqAFbPtYpPa5yYdlQDEHYgetzxJ3/Cqk3gwQm8p3vmhxa7nVHpY0JRok66yZ5XHNoCY4keospwpmvucyXgd4SoqgVa1aUqcc6fRVzwE/zBK7z+4Gyj+VMZJmiP0EX4dxZznmYfV7C3qn9c2LdhuHdniD3qMFIOMXG3XB8vnLbZdipiezMnXusgC3FRy3DnmLHPLPwJiEAKPWNzpj33D6rSJENnTiKVSXiDOY4nmhU/djKBwsDb59ZDH4Pml//vhxK2qkArGcJ8mBEFHsDutgblwZBBjE8AznU/2ElMbHILoOkeMV1g+N4u0H/AAUNBVgIsTQDHbgmCqjhZUFqj35uvKiS13fC7VPX9sjUC/+tW2IJoG1GueEilfxDoArSgux+nXoiEXD84Eym0k/dlZZQJxuc1mfnJ0XnaNDszo6Ay1SQHL0HDYaoZWVyF4KavEzd+1dhkhmIDtW2Y3xmlP5FAkE0cKjpARBLPmoDrdZm+pwVCyfemDVbKUqJiDocCvyq85OeY497erTpAzt0I+Mqp6+4UeTTq3t9HuXYlCcKC4YhILIvocyaQq6lrxyQ="
+    
+  oraclejdk8:
+    - SQ_RUN=yes
 
 before_script: true
 install: true
