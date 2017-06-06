@@ -6,7 +6,22 @@ jdk:
   - oraclejdk8
 os:
   - linux
+
+env:
+  global:
+    # GITHUB_TOKEN
+    - secure: "jRio1btIZShrN2p/Rc59KZPUt8wdZX0jyToCElSLmgpO9RZCLtE9L95NJXfIRqtfZ/uOzyyhyt7EjpP6Rqy1Nf7MGBlBN7drc8naoLLeYG/au+7HmtsXA0MhGE9FhtAeNCxl/5YmTSZH3B5dWk+PC6yzGrGblZ5oWLGLI+8jyKH/GbzWkYW5OMo8Q2wA7JWhFq1/XKPffu/QjSXhmDkWAga/i/BFsm0sz6wcZVVnKKxfmmKJAfFbLYytr0dKNmpc9d/yp7yN0ShDO/MoZgsk4sM520pPO978q7B8at0wm4xZqfZwQ68GRbA5QckYwzS58jCs42/SAfkK5Cb4+WvizfL6n+0zPIUN40RSV9jDb6m9qEpKs3hjlQT+6hsBQo/fNYUGrR24rhVAh0xmeBIkrq96qWyq3a9gD80SuT5CjSYrG3Wjjbq68OFsBl6I3TpmDdtAWQ6LcYjEgl/eJQ4Bq0o3+qkOtSzJ8EnHxmOhhbNuf7/nOg2k5Ec2lOUFrGo+Mp492HhKwgCboHhGrbmoL+lL/3fKiCeHrZD+j/2TLKo5CQhYm/92nYyhiq513eKKNAaxPTKRIH/V1qpKbWEgJRTCvi22tfgSDvq+fuBMmv4EE0OpnhPhdYENYbWqkAgsnAfpdPCa7KyRkY/1B1UYUE7pR9p/HUKMta8M4n8UQUs="
+    #
+    - SONAR_HOST_URL="https://sonarcloud.io"
+    #
+    # SONAR_TOKEN
+    - secure: "gjbQsQttulgrRYiMzLLKId1Mj8pZU5rejcyqLW3Cw87trZwjVwHBWH49yBkZcWJFV60bxvKenpUiz2VAHMEGD6hyvp10r02C6EZhz83YqcSY0OkqAFbPtYpPa5yYdlQDEHYgetzxJ3/Cqk3gwQm8p3vmhxa7nVHpY0JRok66yZ5XHNoCY4keospwpmvucyXgd4SoqgVa1aUqcc6fRVzwE/zBK7z+4Gyj+VMZJmiP0EX4dxZznmYfV7C3qn9c2LdhuHdniD3qMFIOMXG3XB8vnLbZdipiezMnXusgC3FRy3DnmLHPLPwJiEAKPWNzpj33D6rSJENnTiKVSXiDOY4nmhU/djKBwsDb59ZDH4Pml//vhxK2qkArGcJ8mBEFHsDutgblwZBBjE8AznU/2ElMbHILoOkeMV1g+N4u0H/AAUNBVgIsTQDHbgmCqjhZUFqj35uvKiS13fC7VPX9sjUC/+tW2IJoG1GueEilfxDoArSgux+nXoiEXD84Eym0k/dlZZQJxuc1mfnJ0XnaNDszo6Ay1SQHL0HDYaoZWVyF4KavEzd+1dhkhmIDtW2Y3xmlP5FAkE0cKjpARBLPmoDrdZm+pwVCyfemDVbKUqJiDocCvyq85OeY497erTpAzt0I+Mqp6+4UeTTq3t9HuXYlCcKC4YhILIvocyaQq6lrxyQ="
+
 before_script: true
 install: true
-script: mvn clean test
+
+script:
+  - mvn clean test
+  - ./.travis/runSonarQubeAnalysis.sh
+
 after_script: true
